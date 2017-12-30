@@ -4,4 +4,10 @@
     <string name="title_gifts">Gifts</string>
     <string name="title_cart">Cart</string>
     <string name="title_profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment_cart">Cart Fragment</string>
+    <string name="fragment_gifts">Gift Fragment</string>
+    <string name="fragment_profile">Profile Fragment</string>
+    <string name="fragment_store">Store Fragment</string>
 </resources>
