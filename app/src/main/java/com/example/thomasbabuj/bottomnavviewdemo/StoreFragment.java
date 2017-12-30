@@ -104,7 +104,7 @@ public class StoreFragment extends Fragment {
         rvNewReleaseFlims.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(8), true));
         rvNewReleaseFlims.setItemAnimator(new DefaultItemAnimator());
         rvNewReleaseFlims.setAdapter(mStoreAdapter);
-        rvNewReleaseFlims.setNestedScrollingEnabled(false);
+        rvNewReleaseFlims.setNestedScrollingEnabled(true);
 
 
         fetchStoreItem();

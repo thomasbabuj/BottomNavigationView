@@ -3,6 +3,7 @@ package com.example.thomasbabuj.bottomnavviewdemo;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
@@ -29,10 +30,16 @@ public class MainActivity extends AppCompatActivity implements
 
         toolbar = getSupportActionBar();
         toolbar.setTitle("Store");
-        loadFragments(new StoreFragment());
 
         bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        // attaching bottom navigation behaviour - show/hide on scroll
+        CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) bottomNavigationView.getLayoutParams();
+        layoutParams.setBehavior( new BottomNavigationBehavior());
+
+        // load the store fragments by default
+        loadFragments(new StoreFragment());
     }
 
     private void loadFragments(Fragment fragment) {
